@@ -13,6 +13,7 @@ public class UserRegistration {
     	firstNameValidate();
     	lastNameValidate();
     	emailValidate();
+    	passwordValidate();
      }	
     	/*
          * First name must start with Capital letter and has minimum 3 length
@@ -47,6 +48,14 @@ public class UserRegistration {
             System.out.println("Enter mobile no. : ");
             String phNum = scanner.nextLine();
             System.out.println(Pattern.matches("[1-9]{2}[\s][0-9]{10}", phNum));
+        }
+        /*
+         * Password contains minimum 8 characters, atleast 1 capital Letter, atleast 1 small Letter, atleast 1 numeric value and exact one Special character( like !@#$%^&+= )
+         */
+        public static void passwordValidate() {
+            System.out.print("Enter password : ");
+            String password = scanner.next();
+            System.out.println(Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=[^!@#$%^&+=]*[!@#$%^&+=][^!@#$%^&+=]*$)(?=.*[0-9]).{8,}$", password));
         }
 }
        
