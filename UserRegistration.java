@@ -9,7 +9,7 @@ public class UserRegistration {
            
 	    //main method
     public static void main(String[] args) {
-    
+    	phoneNumberValidate();
     	firstNameValidate();
     	lastNameValidate();
     	emailValidate();
@@ -38,6 +38,15 @@ public class UserRegistration {
             String email = "abc.xyz@bl.co.in";
             System.out.println("Email : " + email);
             System.out.println(Pattern.matches("^(abc)[.][a-z]+[@](bl)[.](co)[.][a-z]+$", email));
+        }
+        /*
+         * Phone number starts with 2 digit country code followed by space and 10 digit number
+         */
+       
+        public static void phoneNumberValidate() {
+            System.out.println("Enter mobile no. : ");
+            String phNum = scanner.nextLine();
+            System.out.println(Pattern.matches("[1-9]{2}[\s][0-9]{10}", phNum));
         }
 }
        
