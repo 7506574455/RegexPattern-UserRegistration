@@ -11,7 +11,7 @@ public class UserRegistration {
     public static void main(String[] args) {
     
     	firstNameValidate();
-    	
+    	lastNameValidate();
      }	
     	/*
          * First name must start with Capital letter and has minimum 3 length
@@ -20,5 +20,14 @@ public class UserRegistration {
             System.out.print("Enter first Name : ");
             String firstName = scanner.next();
             System.out.println(Pattern.matches("[A-Z][a-z]{2,}", firstName));
-    	}    
-}        
+    	} 
+    	/*
+         * Last name must start with Capital letter and has minimum 3 length
+         */
+        public static void lastNameValidate() {
+    	    System.out.print("Enter last Name : ");
+            String lastName = scanner.next();
+            System.out.println(Pattern.matches("[A-Z][a-z]{2,}", lastName));                
+        }    
+}
+       
